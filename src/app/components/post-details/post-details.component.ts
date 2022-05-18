@@ -11,19 +11,19 @@ import {PostService} from "../../services";
 export class PostDetailsComponent implements OnInit {
   post: IPost;
 
-  constructor(private activatedRoute:ActivatedRoute,
-              private router:Router,
-              private postService:PostService) { }
+  constructor(private activatedRoute: ActivatedRoute,
+              private router: Router,
+              private postService: PostService) {
+  }
 
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe(({id})=>{
+    this.activatedRoute.params.subscribe(({id}) => {
       let state = this.router.getCurrentNavigation()?.extras?.state?.['posts'] as IPost;
-      if (!state){
-        this.postService.getById(id).subscribe(value => this.post=value)
-        console.log(1)
-      }else {
-        this.post=state
-        console.log(2)
+      if (!state) {
+        this.postService.getById(id).subscribe(value => this.post = value)
+      } else {
+        this.post = state
+
       }
 
 
