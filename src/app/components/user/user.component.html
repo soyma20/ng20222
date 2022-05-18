@@ -3,5 +3,5 @@
 <p>{{user.id}}
   {{user.name}}
 <!--  <a routerLink="userDetails/{{user.id}}">details</a>-->
-  <a [routerLink]="['userDetails',user.id]">details</a>
+  <a [routerLink]="['userDetails',user.id]" [state]="{data:user}">details</a>
 </p>
