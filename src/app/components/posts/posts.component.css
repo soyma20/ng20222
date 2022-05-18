@@ -1,6 +1,8 @@
-.posts{
-  width: 50%;
-}
 .conteiner{
   display: flex;
+  justify-content: space-between;
 }
+.links{
+  width: 550px;
+}
+

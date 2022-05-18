@@ -37,7 +37,9 @@ const routes: Route[] = [
       },
       {
         path: 'comments', component: CommentsComponent,
-        children: []
+        children: [
+          {path: ':id', component: CommentDetailsComponent}
+        ]
       }
     ]
   }

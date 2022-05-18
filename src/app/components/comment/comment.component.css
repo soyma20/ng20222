@@ -1,0 +1,7 @@
+.comment a{
+  text-decoration: none;
+  color: black;
+}
+.activated a{
+  color: red;
+}
