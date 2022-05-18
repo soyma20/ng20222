@@ -16,8 +16,12 @@ export class CommentDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(({id})=>{
-      let data = history.state.data;
-      this.comment=data
+      let {data} = history.state;
+      if (!data){
+        this.commentService.getById(id).subscribe(value => this.comment=value)
+      }else {
+        this.comment=data
+      }
 
     })
   }
