@@ -6,7 +6,8 @@ import {MainLayoutComponent} from "./layouts/main-layout/main-layout.component";
 
 const routes:Routes = [
   {path:'', component: MainLayoutComponent, children:[
-      {path: 'login', loadChildren:()=>}
+      {path: 'login', loadChildren:()=>},
+      {path: 'register', loadChildren:()=>}
     ]}
 ]
 
