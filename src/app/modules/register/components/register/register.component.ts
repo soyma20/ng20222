@@ -10,9 +10,9 @@ import {Router} from "@angular/router";
 })
 export class RegisterComponent implements OnInit {
   form: FormGroup;
-  userNameError:string;
+  userNameError: string;
 
-  constructor(private authService:AuthService, private router: Router) {
+  constructor(private authService: AuthService, private router: Router) {
     this._createForm()
   }
 
@@ -32,11 +32,12 @@ export class RegisterComponent implements OnInit {
   register(): void {
     let rawValue = this.form.getRawValue();
     delete rawValue.confirmPassword;
-    this.authService.register(rawValue).subscribe(
-      () => this.router.navigate(['login']),
-      error => this.userNameError =error.error.username[0]
-    )
-
+    this.authService.register(rawValue).subscribe({
+      next: () => {
+        this.router.navigate(['login'])
+      },
+      error: e => this.userNameError = e.error.username[0]
+    })
   }
 
   _checkPassword(form: AbstractControl): ValidationErrors | null {
