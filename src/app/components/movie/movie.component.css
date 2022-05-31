@@ -1,0 +1,12 @@
+img{
+  width: 200px;
+  border-radius: 20px;
+}
+.container{
+  width: 200px;
+  margin: 15px;
+}
+.link{
+  text-decoration: none;
+  text-align: center;
+}
