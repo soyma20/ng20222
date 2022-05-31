@@ -13,7 +13,7 @@ export class MovieService {
 
   }
 
-  getAll(): Observable<IResponseMovie> {
+  getAll(page:number=1): Observable<IResponseMovie> {
     return this.httpClient.get<IResponseMovie>(urls.movies)
   }
 
