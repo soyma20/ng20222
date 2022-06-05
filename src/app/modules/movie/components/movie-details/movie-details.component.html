@@ -1,0 +1,21 @@
+<img src="{{_baseUrl}}{{movie.backdrop_path}}" alt="background" class="background">
+<div class="content">
+  <div>
+    <div class="title">{{movie.original_title}}</div>
+    <div class="text">Average vote: {{movie.vote_average}}</div>
+    <div class="boxes">
+      <div class="box"> Status: {{movie.status}}</div>
+      <div class="box"> Runtime: {{movie.runtime}} minutes</div>
+    </div>
+    <div class="genres">
+      <div *ngFor="let genre of movie.genres" class="genre">
+        {{genre.name}}
+      </div>
+    </div>
+  </div>
+  <div class="text"> Tagline: {{movie.tagline}}</div>
+  <div class="overview">{{movie.overview}}</div>
+
+  <button class="play">Play</button>
+
+</div>

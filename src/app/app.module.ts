@@ -1,15 +1,17 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
+import {AppRoutingModule} from "./app-routing.module";
 
 import {AppComponent} from './app.component';
-import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {MainLayoutComponent} from './layouts/main-layout/main-layout.component';
 import {HeaderComponent} from './components/header/header.component';
-import {AppRoutingModule} from "./app-routing.module";
-import {MoviesComponent} from './components/movies/movies.component';
-import {MovieComponent} from './components/movie/movie.component';
-import {MainInterceptor} from "./main.interceptor";
-import { SideBarComponent } from './components/side-bar/side-bar.component';
+import {MoviesComponent} from './modules/movies/components/movies/movies.component';
+import {MovieComponent} from './modules/movies/components/movie/movie.component';
+import {SideBarComponent} from './components/side-bar/side-bar.component';
+import {HttpModule} from "./http.module";
+import {GenresComponent} from "./components/genres/genres.component";
+import {GenreComponent} from "./components/genre/genre.component";
+import {UserComponent} from "./components/user/user.component";
 
 @NgModule({
   declarations: [
@@ -19,19 +21,17 @@ import { SideBarComponent } from './components/side-bar/side-bar.component';
     MoviesComponent,
     MovieComponent,
     SideBarComponent,
-
+    GenresComponent,
+    GenreComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpModule
   ],
   providers: [
-    {
-      provide:HTTP_INTERCEPTORS,
-      multi:true,
-      useClass:MainInterceptor
-    }
+
   ],
   bootstrap: [AppComponent]
 })

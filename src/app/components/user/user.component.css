@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  width: 180px;
+  justify-content: space-evenly;
+  margin: 30px 0;
+  align-items: center;
+}
+
+.container h5 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.miniPhoto {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: grey;
+}

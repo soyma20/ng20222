@@ -1,0 +1,12 @@
+<div class="container">
+  <a routerLink="{{movie.id}}" class="link">
+    <img src="{{_baseUrl}}{{movie.poster_path}}" alt="poster">
+    <a class="text">{{movie.title}}</a>
+  </a>
+    <div class="vote">Average vote: {{movie.vote_average}}</div>
+  <div class="genres">
+    <div *ngFor="let genre of movieGenres">
+      <div class="genre">{{genre.name}}</div>
+    </div>
+  </div>
+</div>

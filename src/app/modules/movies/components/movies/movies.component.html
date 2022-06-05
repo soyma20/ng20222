@@ -1,0 +1,13 @@
+<div class="container">
+  <div>
+    <button (click)="prev()">Previous</button>
+    <button (click)="next()" >Next</button>
+  </div>
+  <div class="wrapper">
+    <app-movie *ngFor="let movie of movies" [movie]="movie"></app-movie>
+  </div>
+  <div>
+    <button (click)="next()">Next</button>
+    <button (click)="prev()">Previous</button>
+  </div>
+</div>

@@ -1,12 +1,19 @@
-.container{
-  display: flex;
-  width: 180px;
-  justify-content: space-evenly;
-  margin-top: 30px;
+.link{
+  display: block;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  font-weight: 700;
+  line-height: 25px;
+  text-align: center;
 }
-.miniPhoto{
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
-  background-color: red;
+.media{
+  text-align: center;
+  margin-bottom: 12px;
+  margin-top: 15px;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #61757E;
 }

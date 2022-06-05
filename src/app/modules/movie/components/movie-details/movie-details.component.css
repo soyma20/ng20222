@@ -1,0 +1,67 @@
+.background{
+  height: 700px;
+  border-radius: 30px;
+}
+.content{
+  position: relative;
+  bottom:680px;
+  left: 20px;
+  background: black;
+  border-radius: 30px;
+  width: 650px;
+  height: 400px;
+  padding: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title{
+  font-size: 60px;
+  line-height: 45px;
+  color: white;
+  text-align: center;
+
+}
+.text{
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+}
+.boxes{
+  display: flex;
+  justify-content: center;
+}
+.box{
+  color: white;
+  text-align: center;
+  margin: 10px;
+  border: 2px solid white;
+}
+.genres{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.genre{
+  color: black;
+  background: white;
+  height: 21px;
+  border-radius: 5px;
+  margin: 0 5px;
+  padding: 2px;
+}
+.overview{
+  margin-top: 20px;
+  color: white;
+  text-align: center;
+}
+.play{
+  margin-top: 30px;
+  width: 120px;
+  height: 40px;
+  border-radius: 15px;
+  border: 2px solid #61757E;
+  background: #bfbfd3;
+  color: #61757E;
+  font-size: 20px;
+}
